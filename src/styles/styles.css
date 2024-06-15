@@ -1,0 +1,120 @@
+/* Definir el color principal */
+:root {
+  --primary-color: #40e0d0; /* Verde Turquesa */
+  --secondary-color: #e0f7fa; /* Un tono más claro para fondo */
+  --text-color: #333; /* Color de texto para buen contraste */
+  --header-bg-color: #e0f7fa; /* Fondo claro para el header */
+  --button-bg-color: #40e0d0; /* Color de fondo de botones */
+  --button-text-color: white; /* Color de texto de botones */
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f0f0f0;
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  width: 99%;
+  height: 99vh;
+}
+
+.header {
+  text-align: center;
+  padding: 0.5em;
+  line-height: 1;
+  background-color: var(--header-bg-color);
+  width: 100%;
+}
+
+.header h1 {
+  color: var(--primary-color);
+  margin: 0.5em 0;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 5px;
+  background-color: #e0e0e0;
+  margin-top: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background-color: var(--primary-color);
+  transition: width 0.25s ease-in-out;
+}
+
+.book {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0.5em 1em;
+}
+
+.page {
+  background-color: var(--secondary-color);
+  padding: 1em 2em;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 90%;
+  transition: transform 0.6s ease-in-out;
+  height: 60vh;
+  overflow: auto;
+}
+
+.page h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: var(--primary-color);
+}
+
+.page p {
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Botones de navegación */
+nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+button {
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #37c0b3; /* Un tono más oscuro al pasar el cursor */
+}
+
+button:disabled {
+  background-color: #e0e0e0;
+  color: #999;
+  cursor: not-allowed;
+}
+
+footer {
+  text-align: center;
+  padding: 0.5em 1em;
+  background-color: var(--secondary-color);
+}
